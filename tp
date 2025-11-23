@@ -1,3 +1,3 @@
 #!/bin/bash
 
-source ""$HOME/TerminalPlus"/tp" "$@"
+source "$HOME/TerminalPlus/tp" "$@"
