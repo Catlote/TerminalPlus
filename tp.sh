@@ -3,7 +3,7 @@
 # --------------------------------------------------
 # TerminalPlus v0.1.3
 # To-do list for v0.1.4:
-# Add --update to update Terminal+
+# Add --update to update Terminal+ (COMPLETE)
 # Add --uptodate to check if Terminal+ is up to date
 # --------------------------------------------------
 
@@ -26,6 +26,13 @@ cleanup() {
 }
 
 case "$cmd" in
+    --update)
+        echo "Updating TerminalPlus..."
+        cd ~/TerminalPlus || { echo "TerminalPlus folder not found!"; exit 1; }
+        git pull origin main
+        echo "TerminalPlus updated!"
+        ;;
+    
     --version)
         printf "${CYAN}Terminal+${RESET} Version ${GREEN}0.1.3${RESET}\n\n"
         ;;
