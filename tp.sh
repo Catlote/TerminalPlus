@@ -3,8 +3,9 @@
 # --------------------------------------------------
 # TerminalPlus v0.1.3
 # To-do list for v0.1.4:
-# Add --update to update Terminal+ (COMPLETE)
+# Add --update to update Terminal+ (Half-Complete)
 # Add --uptodate to check if Terminal+ is up to date
+# Add -setup to setup Terminal+
 # --------------------------------------------------
 
 
