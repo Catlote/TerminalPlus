@@ -1,3 +1,3 @@
 #!/bin/bash
 
-source "/Users/yourAppleAccount/TerminalPlus/tp.sh" "$@"
+source ""$HOME/TerminalPlus"/tp" "$@"
