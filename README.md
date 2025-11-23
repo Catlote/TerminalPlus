@@ -20,6 +20,13 @@ You should see 2 files:
 * **tp**
 * **tp.sh**
 
+Open tp.sh whit a text or code editor
+Change yourAppleAccount whit your actual account.
+To find your apple account open Settings and click on your profile.
+MacOS should show your Apple account name how it is in the files of your system, If you do not see it
+
+* Note: This is soon going to change and you must run a command.
+
 Then, run on your terminal:
 <pre>
 cd /TerminalPlus/
