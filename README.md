@@ -33,7 +33,6 @@ MacOS should show your Apple account name how it is in the files of your system,
 Then, run on your terminal:
 <pre>
 cd ~/TerminalPlus/
-chmod +x tp
 chmod +x tp.sh
 ./tp.sh --setup
 </pre>
