@@ -9,7 +9,10 @@ May work for Windows but requires a lot of changes.
 
 # Setup for MacOS:
 
-Download the repository (https://github.com/Catlote/TerminalPlus)
+Download the repository (https://github.com/Catlote/TerminalPlus) pasting this in your terminal:
+<pre>
+gh repo clone Catlote/TerminalPlus
+</pre>
 
 Check if the downloaded TerminalPus folder is in:
 Users/youAppleAccount/
