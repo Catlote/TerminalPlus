@@ -10,7 +10,7 @@ CYAN="\033[36m"
 WHITE="\033[37m"
 RESET="\033[0m"
 
-VERSION="0.1.4"
+VERSION="0.1.4.1"
 
 cmd="$1"
 sub="$2"
@@ -22,7 +22,7 @@ cleanup() {
 }
 
 case "$cmd" in
-    --uninstall-y)
+    --uninstall)
         echo "Uninstalling Terminal+"
         echo "(ㅠ_ㅠ) <Noooo!>"
         echo "('ᴗ') <Atleast I wont see you anymore>"
@@ -30,11 +30,6 @@ case "$cmd" in
         echo "(⊙_⊙) <wait... I still exist in your heart... right?>"
         sudo rm -f /usr/local/bin/tp
         rm -rf ~/TerminalPlus/
-        ;;
-        
-    --uninstall)
-        echo "Are you sure you want to uninstall Terminal+?"
-        echo "Type --uninstall-y to continue"
         ;;
     
     --uptodate)
@@ -92,7 +87,17 @@ case "$cmd" in
 
     cmds)
         printf "${BLUE}Available commands:${RESET}\n"
-        printf "cleanup, cmds, info, new, version, tp\n\n"
+        printf "cleanup\n"
+        printf "cmds\n"
+        printf "new\n"
+        printf "version\n"
+        printf "--version\n"
+        printf "--info\n"
+        printf "--setup\n"
+        printf "--update\n"
+        printf "--uptodate\n"
+        printf "--uninstall\n"
+        printf "tp\n\n"
         ;;
 
     info)
@@ -101,8 +106,14 @@ case "$cmd" in
             cmds) printf "${BLUE}cmds${RESET}: Lists all available commands.\n\n" ;;
             info) printf "${BLUE}info${RESET}: Shows detailed info about a command.\n\n" ;;
             new) printf "${BLUE}new${RESET}: Creates a new file or folder. Usage: new <file/folder> <name> [directory]\n\n" ;;
-            version) printf "${BLUE}version${RESET}: Displays the current version.\n\n" ;;
-            tp) printf "${BLUE}tp${RESET}: Main TerminalPlus command.\n\n" ;;
+            version) printf "${BLUE}--version${RESET}: Displays the current version.\n\n" ;;
+            tp) printf "${BLUE}tp${RESET}: Main Terminal+ command.\n\n" ;;
+            
+            --setup) printf "${BLUE}--setup${RESET}: Setups Terminal+\n\n" ;;
+            --update) printf "${BLUE}--update${RESET}: Updates Terminal+ to the latest version. ${RED}Requires internet connection${RESET}\n\n" ;;
+            --uptodate) printf "${BLUE}--uptodate${RESET}: Checks if Terminal+ is up to date. ${RED}Requires internet connection${RESET}\n\n" ;;
+            --uninstall) printf "${BLUE}--uninstall${RESET}: Uninstalls Terminal+. And thats sad. So please dont do that.\n\n" ;;
+        
             *) printf "${RED}Unknown command:${RESET} $sub\n\n" ;;
         esac
         ;;
@@ -122,10 +133,6 @@ case "$cmd" in
         else
             mkdir -p "$dir/$name" && printf "${GREEN}Created folder: $dir/$name${RESET}\n\n" || printf "${RED}Error creating folder${RESET}\n\n"
         fi
-        ;;
-
-    version)
-        printf "${CYAN}Terminal+${RESET} Version ${GREEN}0.1.3${RESET}\n\n"
         ;;
 
     tp)
