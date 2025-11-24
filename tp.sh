@@ -48,7 +48,7 @@ case "$cmd" in
         echo "Setting up TerminalPlus..."
         sudo rm -f /usr/local/bin/tp
         sudo chmod +x "$HOME/TerminalPlus/tp.sh"
-        sudo ln -s "$HOME/TerminalPlus/tp.sh" /usr/local/bin/tp
+        sudo ln -s "$HOME/TerminalPlus/tp" /usr/local/bin/tp
         cleanup
         echo "Setup complete! You can now run 'tp' from anywhere."
         ;;
@@ -59,7 +59,7 @@ case "$cmd" in
         cd "$HOME/TerminalPlus" || { echo "TerminalPlus folder not found!"; exit 1; }
         git pull origin main
         sudo chmod +x "$HOME/TerminalPlus/tp.sh"
-        sudo ln -s "$HOME/TerminalPlus/tp.sh" /usr/local/bin/tp
+        sudo ln -s "$HOME/TerminalPlus/tp" /usr/local/bin/tp
         cleanup
         echo "Update complete!"
         ;;
