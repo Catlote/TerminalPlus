@@ -47,22 +47,29 @@ case "$cmd" in
     --setup)
         echo "Setting up TerminalPlus..."
         sudo rm -f /usr/local/bin/tp
-        sudo chmod +x "$HOME/TerminalPlus/tp.sh"
-        sudo ln -s "$HOME/TerminalPlus/tp" /usr/local/bin/tp
+        chmod +x "$HOME/TerminalPlus/tp.sh"
+        sudo cp "$HOME/TerminalPlus/tp.sh" /usr/local/bin/tp
         cleanup
         echo "Setup complete! You can now run 'tp' from anywhere."
         ;;
 
     --update)
         echo "Updating TerminalPlus..."
-        sudo rm -f /usr/local/bin/tp
-        cd "$HOME/TerminalPlus" || { echo "TerminalPlus folder not found!"; exit 1; }
+        ```
+        cd "$HOME/TerminalPlus" || {
+            echo "TerminalPlus folder not found!"
+            exit 1
+        }
+        # Pull latest version
         git pull origin main
-        sudo chmod +x "$HOME/TerminalPlus/tp.sh"
-        sudo ln -s "$HOME/TerminalPlus/tp" /usr/local/bin/tp
+        sudo rm -f /usr/local/bin/tp
+        chmod +x "$HOME/TerminalPlus/tp.sh"
+        sudo cp "$HOME/TerminalPlus/tp.sh" /usr/local/bin/tp
         cleanup
         echo "Update complete!"
         ;;
+        ```
+
     
     --version)
         printf "${CYAN}Terminal+${RESET} Version ${GREEN}0.1.3${RESET}\n\n"
