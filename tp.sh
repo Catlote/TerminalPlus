@@ -1,12 +1,5 @@
 #!/bin/bash
-
-# --------------------------------------------------
-# TerminalPlus v0.1.3
-# To-do list for v0.1.4:
-# Add --update to update Terminal+ (COMPLETE)
-# Add --uptodate to check if Terminal+ is up to date (COMPLETE)
-# Add -setup to setup Terminal+ (COMPLETE)
-# --------------------------------------------------
+# if you are editing or seeing this file, do NOT remove the sheblang, which is whats ontop of this comment
 
 
 RED="\033[31m"
