@@ -10,6 +10,8 @@ CYAN="\033[36m"
 WHITE="\033[37m"
 RESET="\033[0m"
 
+VERSION="0.1.4"
+
 cmd="$1"
 sub="$2"
 arg3="$3"
@@ -20,6 +22,21 @@ cleanup() {
 }
 
 case "$cmd" in
+    --uninstall-y)
+        echo "Uninstalling Terminal+"
+        echo "(ㅠ_ㅠ) <Noooo!>"
+        echo "('ᴗ') <Atleast I wont see you anymore>"
+        echo "¯\_(ツ)_/¯ <Just kidding. I will uninstall Terminal+ for you>"
+        echo "(⊙_⊙) <wait... I still exist in your heart... right?>"
+        sudo rm -f /usr/local/bin/tp
+        rm -rf ~/TerminalPlus/
+        ;;
+        
+    --uninstall)
+        echo "Are you sure you want to uninstall Terminal+?"
+        echo "Type --uninstall-y to continue"
+        ;;
+    
     --uptodate)
         cd "$HOME/TerminalPlus" || { echo "TerminalPlus folder not found!"; exit 1; }
         git fetch origin >/dev/null 2>&1
@@ -59,13 +76,13 @@ case "$cmd" in
 
     
     --version)
-        printf "${CYAN}Terminal+${RESET} Version ${GREEN}0.1.3${RESET}\n\n"
+        printf "${CYAN}Terminal+${RESET} Version ${GREEN}${VERSION}${RESET}\n\n"
         ;;
 
     --info)
         printf "${BLUE}Terminal+${RESET} was designed to make the default MacOS terminal better.\n"
         printf "Fixes clear command, simplifies usage, and adds new commands.\n"
-        printf "Current version: 0.1.3\n\n"
+        printf "Current version: ${GREEN}${VERSION}${RESET}\n\n"
         ;;
 
     cleanup)
