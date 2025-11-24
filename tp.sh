@@ -32,6 +32,7 @@ case "$cmd" in
         sudo rm -f /usr/local/bin/tp
         sudo chmod +x "$HOME/TerminalPlus/tp.sh"
         sudo ln -s "$HOME/TerminalPlus/tp.sh" /usr/local/bin/tp
+        cleanup
         echo "Setup complete! You can now run 'tp' from anywhere."
         ;;
 
@@ -42,6 +43,7 @@ case "$cmd" in
         git pull origin main
         sudo chmod +x "$HOME/TerminalPlus/tp.sh"
         sudo ln -s "$HOME/TerminalPlus/tp.sh" /usr/local/bin/tp
+        cleanup
         echo "Update complete!"
         ;;
     
