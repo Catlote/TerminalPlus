@@ -55,20 +55,13 @@ case "$cmd" in
 
     --update)
         echo "Updating TerminalPlus..."
-        ```
-        cd "$HOME/TerminalPlus" || {
-            echo "TerminalPlus folder not found!"
-            exit 1
-        }
-        # Pull latest version
-        git pull origin main
-        sudo rm -f /usr/local/bin/tp
-        chmod +x "$HOME/TerminalPlus/tp.sh"
-        sudo cp "$HOME/TerminalPlus/tp.sh" /usr/local/bin/tp
-        cleanup
+        cd "$HOME/TerminalPlus" || exit
+        
+        git fetch --all
+        git reset --hard origin/main
+        
         echo "Update complete!"
-        ```
-        ;;
+    ;;
 
     
     --version)
