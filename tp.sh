@@ -30,7 +30,7 @@ case "$cmd" in
     --setup)
         echo "Setting up TerminalPlus..."
         sudo rm -f /usr/local/bin/tp
-        sudo ln -s "$HOME/TerminalPlus/tp.sh" /usr/local/bin/tp
+        sudo mv "$HOME/TerminalPlus/tp.sh" /usr/local/bin/tp
         sudo chmod +x "$HOME/TerminalPlus/tp.sh"
         echo "Setup complete! You can now run 'tp' from anywhere."
         ;;
@@ -40,7 +40,7 @@ case "$cmd" in
         sudo rm -f /usr/local/bin/tp
         cd "$HOME/TerminalPlus" || { echo "TerminalPlus folder not found!"; exit 1; }
         git pull origin main
-        sudo ln -s "$HOME/TerminalPlus/tp.sh" /usr/local/bin/tp
+        sudo mv "$HOME/TerminalPlus/tp.sh" /usr/local/bin/tp
         sudo chmod +x "$HOME/TerminalPlus/tp.sh"
         echo "Update complete!"
         ;;
