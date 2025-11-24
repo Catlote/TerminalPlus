@@ -67,8 +67,8 @@ case "$cmd" in
         sudo cp "$HOME/TerminalPlus/tp.sh" /usr/local/bin/tp
         cleanup
         echo "Update complete!"
-        ;;
         ```
+        ;;
 
     
     --version)
