@@ -4,7 +4,7 @@
 # TerminalPlus v0.1.3
 # To-do list for v0.1.4:
 # Add --update to update Terminal+ (COMPLETE)
-# Add --uptodate to check if Terminal+ is up to date
+# Add --uptodate to check if Terminal+ is up to date (COMPLETE)
 # Add -setup to setup Terminal+ (COMPLETE)
 # --------------------------------------------------
 
@@ -27,6 +27,23 @@ cleanup() {
 }
 
 case "$cmd" in
+    --uptodate)
+        cd "$HOME/TerminalPlus" || { echo "TerminalPlus folder not found!"; exit 1; }
+        git fetch origin >/dev/null 2>&1
+
+        LOCAL=$(git rev-parse @)
+        REMOTE=$(git rev-parse @{u})
+        BASE=$(git merge-base @ @{u})
+
+        if [ "$LOCAL" = "$REMOTE" ]; then
+            echo "TerminalPlus is up to date!"
+        elif [ "$LOCAL" = "$BASE" ]; then
+            echo "Update available! Run 'tp --update' to get the latest version."
+        else
+            echo "You have local changes ahead of origin."
+        fi
+        ;;
+
     --setup)
         echo "Setting up TerminalPlus..."
         sudo rm -f /usr/local/bin/tp
