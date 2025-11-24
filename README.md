@@ -37,4 +37,6 @@ chmod +x tp.sh
 ./tp.sh --setup
 </pre>
 
+* Note: this is will ask for your password. Dont worry, were not stealing it. MacOS needs it to confirm the movement of a file to become a terminal command.
+
 # Commands
