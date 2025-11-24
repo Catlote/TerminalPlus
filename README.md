@@ -11,16 +11,14 @@ May work for Windows but requires a lot of changes.
 
 Download the repository (https://github.com/Catlote/TerminalPlus) pasting this in your terminal:
 <pre>
+cd ~
 gh repo clone Catlote/TerminalPlus
 </pre>
 or
 <pre>
+cd ~
 git clone https://github.com/Catlote/TerminalPlus.git
 </pre>
-
-Check if the downloaded TerminalPus folder is in:
-Users/youAppleAccount/
-If not, move it to Users/yourAppleAccount/
 
 Then open the folder.
 You should see 2 files:
