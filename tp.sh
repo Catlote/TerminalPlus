@@ -49,7 +49,8 @@ case "$cmd" in
     --update)
         echo "Updating TerminalPlus..."
         cd "$HOME/TerminalPlus" || exit
-        sudo rm /usr/local/bin/tp
+        sudo rm -f /usr/local/bin/tp
+        rm -f ~/TerminalPlus/f.x
         git fetch --all
         git reset --hard origin/main
         sudo cp "$HOME/TerminalPlus/tp.sh" /usr/local/bin/tp
