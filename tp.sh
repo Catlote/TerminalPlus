@@ -49,10 +49,10 @@ case "$cmd" in
     --update)
         echo "Updating TerminalPlus..."
         cd "$HOME/TerminalPlus" || exit
-        
+        sudo rm /usr/local/bin/tp
         git fetch --all
         git reset --hard origin/main
-        
+        sudo cp "$HOME/TerminalPlus/tp.sh" /usr/local/bin/tp
         echo "Update complete!"
     ;;
 
