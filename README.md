@@ -20,17 +20,6 @@ cd ~
 git clone https://github.com/Catlote/TerminalPlus.git
 </pre>
 
-Then open the folder.
-You should see 2 files:
-* **tp**
-* **tp.sh**
-
-Open tp.sh whit a text or code editor
-Change yourAppleAccount whit your actual account.
-To find your apple account open Settings and click on your profile.
-MacOS should show your Apple account name how it is in the files of your system, If you do not see it
-
-* Note: This is soon going to change and you must run a command.
 
 Then, run on your terminal:
 <pre>
@@ -39,6 +28,6 @@ chmod +x tp.sh
 ./tp.sh --setup
 </pre>
 
-* Note: this is will ask for your password. Dont worry, were not stealing it. MacOS needs it to confirm the movement of a file to become a terminal command.
+* Note: this may will ask for your password. Dont worry, were not stealing it. MacOS needs it to confirm the movement of a file to become a terminal command.
 
 # Commands
