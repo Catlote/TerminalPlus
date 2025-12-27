@@ -40,7 +40,7 @@ chmod +x tp.sh
 </pre>
 
 *Note:* This may ask for your password.
-Don’t worry, we aren’t stealing it — MacOS just needs permission to move the script and register it as a terminal command.
+Don’t worry, we aren’t stealing it, MacOS just needs permission to move the script.
 
 # Commands
 
@@ -81,4 +81,4 @@ Checks whether Terminal+ is already on the latest version. Also requires interne
 
 <pre>tp --uninstall</pre>  
 
-That’s just… mean…
+That’s just... mean...
